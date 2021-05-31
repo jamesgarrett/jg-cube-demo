@@ -1,0 +1,10 @@
+nav.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}

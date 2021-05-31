@@ -1,6 +1,8 @@
 import React from 'react';
 import RightArrow from '../img/arrow-right.svg';
 import LeftArrow from '../img/arrow-left.svg';
+import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 
 class Cube extends React.Component{
   constructor(props) {
@@ -12,29 +14,23 @@ class Cube extends React.Component{
     this.rotateForward = this.rotateForward.bind(this)
     this.rotateBack = this.rotateBack.bind(this)
   };
-
   rotateBack(){
-    this.setState(
-      {
+    this.setState({
         counter : this.state.counter += 90,
         rotation : 'translateZ( -50vw ) rotateY( ' + this.state.counter + 'deg )'
-      }
-    )
+    })
   }
-
   rotateForward(){
-    this.setState(
-      {
+    this.setState({
         counter : this.state.counter -= 90,
         rotation : 'translateZ( -50vw ) rotateY( ' + this.state.counter + 'deg )'
-      }
-    )
+    })
   }
-
   render(){
     console.log('render rotation: ' + this.state.rotation)
     return(
       <div className="wrap">
+        <Nav />
         <nav>
           <ul>
             <li><button className="previous" onClick={this.rotateBack}><img src={LeftArrow} alt="left arrow"/></button></li>
@@ -49,7 +45,7 @@ class Cube extends React.Component{
                 <div className="content">
                   si lorem ipsum sit dolor est...
                 </div>
-                <div className="footer">content © james garrett 2021</div>
+                <Footer/>
               </div>
             </figure>
             <figure className="back">
@@ -58,7 +54,7 @@ class Cube extends React.Component{
                   <div className="content">
                     si lorem ipsum sit dolor est...
                   </div>
-                  <div className="footer">content © james garrett 2021</div>
+                  <Footer/>
                 </div>
             </figure>
             <figure className="right">
@@ -67,7 +63,7 @@ class Cube extends React.Component{
                   <div className="content">
                     si lorem ipsum sit dolor est...
                   </div>
-                  <div className="footer">content © james garrett 2021</div>
+                  <Footer/>
                 </div>
               </figure>
             <figure className="left">
@@ -76,7 +72,7 @@ class Cube extends React.Component{
                   <div className="content">
                     si lorem ipsum sit dolor est...
                   </div>
-                  <div className="footer">content © james garrett 2021</div>
+                  <Footer/>
                 </div>
             </figure>
           </div>
