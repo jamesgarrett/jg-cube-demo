@@ -47,19 +47,4 @@ div.section-content{
   header, .footer, .content {
     padding: 2em;
   }
-
-  nav{
-    padding: 0 2em;
-  }
-
-  nav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  nav ul li{
-    padding-right: 1em;
-  }
 }

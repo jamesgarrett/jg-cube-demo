@@ -1,4 +1,6 @@
 import React from 'react';
+import RightArrow from '../img/arrow-right.svg';
+import LeftArrow from '../img/arrow-left.svg';
 
 class Cube extends React.Component{
   constructor(props) {
@@ -11,7 +13,7 @@ class Cube extends React.Component{
     this.rotateBack = this.rotateBack.bind(this)
   };
 
-  rotateForward(){
+  rotateBack(){
     this.setState(
       {
         counter : this.state.counter += 90,
@@ -20,7 +22,7 @@ class Cube extends React.Component{
     )
   }
 
-  rotateBack(){
+  rotateForward(){
     this.setState(
       {
         counter : this.state.counter -= 90,
@@ -33,17 +35,17 @@ class Cube extends React.Component{
     console.log('render rotation: ' + this.state.rotation)
     return(
       <div className="wrap">
+        <nav>
+          <ul>
+            <li><button className="previous" onClick={this.rotateBack}><img src={LeftArrow} alt="left arrow"/></button></li>
+            <li><button className="next" onClick={this.rotateForward}><img src={RightArrow} alt="right arrow"/></button></li>
+          </ul>
+        </nav>
         <section className="cube-container">
           <div id="cube" style={{transform: this.state.rotation}}>
             <figure className="front">
               <div className="section-content">
                 <header>home</header>
-                <nav>
-                  <ul>
-                    <li><button className="previous" onClick={this.rotateBack}>previous</button></li>
-                    <li><button className="next" onClick={this.rotateForward}>next</button></li>
-                  </ul>
-                </nav>
                 <div className="content">
                   si lorem ipsum sit dolor est...
                 </div>
@@ -53,12 +55,6 @@ class Cube extends React.Component{
             <figure className="back">
               <div className="section-content">
                   <header>shop</header>
-                  <nav>
-                    <ul>
-                      <li><button className="previous">previous</button></li>
-                      <li><button className="next">next</button></li>
-                    </ul>
-                  </nav>
                   <div className="content">
                     si lorem ipsum sit dolor est...
                   </div>
@@ -68,12 +64,6 @@ class Cube extends React.Component{
             <figure className="right">
               <div className="section-content">
                  <header>projects</header>
-                  <nav>
-                    <ul>
-                      <li><button className="previous">previous</button></li>
-                      <li><button className="next">next</button></li>
-                    </ul>
-                  </nav>
                   <div className="content">
                     si lorem ipsum sit dolor est...
                   </div>
@@ -83,12 +73,6 @@ class Cube extends React.Component{
             <figure className="left">
               <div className="section-content">
                   <header>contact</header>
-                  <nav>
-                    <ul>
-                      <li><button className="previous">previous</button></li>
-                      <li><button className="next">next</button></li>
-                    </ul>
-                  </nav>
                   <div className="content">
                     si lorem ipsum sit dolor est...
                   </div>

@@ -1,6 +1,6 @@
-import './App.css';
-import './css/App.scss';
-import Cube from './components/Cube'
+import './App.scss';
+import './index.css';
+import Cube from './components/Cube.jsx';
 
 function App() {
   return (
