@@ -1,0 +1,29 @@
+/* base */
+
+@import 'base/utils';
+@import 'base/base';
+@import 'base/normalize';
+@import 'base/images';
+
+/* components */
+
+@import 'components/cube.scss';
+@import 'components/cursor.scss';
+@import 'components/header-nav.scss';
+@import 'components/nav.scss';
+
+.App {
+  text-align: center;
+}
+
+html{
+  background: black;
+  -webkit-overflow-scrolling: touch;
+  a, button{
+    &::selection, &:active, &:focus{
+      box-shadow: 0px 0px 20px #ff6161;
+      background: rgba(255,255,255,.8);
+      outline: none;
+    }
+  }
+}

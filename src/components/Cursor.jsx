@@ -76,6 +76,8 @@ const Cursor = () => {
        }
    );
 
+   if (typeof navigator !== "undefined" && isMobile()) return null;
+
    return <div className={cursorClasses}
            style={{
                left: `${position.x}px`,

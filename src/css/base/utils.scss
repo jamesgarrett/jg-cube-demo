@@ -1,0 +1,181 @@
+/*
+a series of atomic classes for applying margins in our frontend
+
+margin location
+	m-a = margin all -- applies margin 1rem to all sides
+	m-t = margin top -- applies margin top
+	m-b = bottom
+	m-l = left
+	m-r = right
+	m-v = vertical
+	m-h = horizontal
+*/
+
+.m-a {margin: var(--m);}
+
+.m-t {margin-top: var(--m);}
+
+.m-b {margin-bottom: var(--m);}
+
+.m-l {margin-left: var(--m);}
+
+.m-r {margin-right: var(--m);}
+
+.m-y {
+  @extend .m-t;
+  @extend .m-b;
+}
+
+.m-x {
+  @extend .m-l;
+  @extend .m-r;
+}
+
+/*
+margin sizing
+  m-sm = used in conjunction with a location, specifies a margin of .25rem
+  m-sm = used in conjunction with a location, specifies a margin of .5rem
+	m-md = used in conjunction with a location, specifies a margin of 1rem
+  m-lg = used in conjunction with a location, specifies a margin of 2rem
+	m-xl = used in conjunction with a location, specifies a margin of 4rem
+*/
+
+.m-xs {--m: var(--m-xs);}
+
+.m-sm {--m: var(--m-sm);}
+
+.m-md {--m: var(--m-md);}
+
+.m-lg {--m: var(--m-lg);}
+
+.m-xl {--m: var(--m-xl);}
+
+/*
+padding location
+	p-a = padding all -- applies padding 1rem to all sides
+	p-t = padding top -- applies padding top
+	p-b = bottom
+	p-l = left
+	p-r = right
+	p-v = vertical
+	p-h = horizontal
+*/
+
+.p-a {padding: var(--p);}
+
+.p-t {padding-top: var(--p);}
+
+.p-b {padding-bottom: var(--p);}
+
+.p-l {padding-left: var(--p);}
+
+.p-r {padding-right: var(--p);}
+
+.p-y {
+  @extend .p-t;
+  @extend .p-b;
+}
+
+.p-x {
+  @extend .p-l;
+  @extend .p-r;
+}
+
+/*
+padding sizing
+  p-xs = used in conjunction with a location, specifies a margin of .25rem
+  p-sm = used in conjunction with a location, specifies a margin of .5rem
+	p-md = used in conjunction with a location, specifies a margin of 1rem
+  p-lg = used in conjunction with a location, specifies a margin of 2rem
+	p-xl = used in conjunction with a location, specifies a margin of 4rem
+*/
+
+.p-xs {--p: var(--p-xs);}
+
+.p-sm {--p: var(--p-sm);}
+
+.p-md {--p: var(--p-md);}
+
+.p-lg {--p: var(--p-lg);}
+
+.p-xl {--p: var(--p-xl);}
+
+
+// scale  down padding sizes on tablet
+
+@media screen and (max-width:1025px){
+  .p-sm {--p: var(--p-xs);}
+
+  .p-md {--p: var(--p-sm);}
+
+	.p-lg {--p: var(--p-md);}
+
+	.p-xl {--p: var(--p-lg);}
+}
+
+
+// scale  down padding sizes on mobile
+
+@media screen and (max-width:767px){
+	.p-md {--p: var(--p-xs);}
+
+	.p-lg {--p: var(--p-sm);}
+
+	.p-xl {--p: var(--p-md);}
+}
+
+// text modifiers these modifiers can be used to align text on the fly
+
+.ta-l{text-align: left;}
+
+.ta-c{text-align: center;}
+
+.ta-r{text-align: right;}
+
+// text transformations
+
+.tt-u{text-transform: uppercase;}
+
+.tt-c{text-transform: capitalize;}
+
+.tt-l{text-transform: lowercase;}
+
+// alignment
+
+.as-c{align-self: center;}
+
+.jc-c{justify-content: center;}
+
+.as-sb{align-self: space-between;}
+
+// background-classes
+
+.bg-c{
+  background-size: cover;
+  background-position: center center;
+}
+
+// display classes
+
+.d-n, .hidden{
+  display:none !important;
+}
+
+.hidden-lg{
+  display:none;
+}
+
+@media screen and (max-width:1025px){
+	.hidden-md{
+		display:none !important;
+	}
+}
+
+@media screen and (max-width:767px){
+	.hidden-sm{
+		display:none !important;
+	}
+  .hidden-lg{
+    display: flex;
+  }
+}

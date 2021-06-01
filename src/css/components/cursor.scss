@@ -22,8 +22,9 @@
 }
 
 .cursor--link-hovered {
-  transform: translate(-50%, -50%) scale(1.25);
+  transform: translate(-50%, -50%) scale(1.5);
   background-color: #fefefe;
+  transition: all 150ms ease;
 }
 
 a {
@@ -33,6 +34,10 @@ a {
 
 html, body {
   cursor: none;
+}
+
+::selection {
+  background-color: dodgerblue;
 }
 
 button:hover, a:hover{

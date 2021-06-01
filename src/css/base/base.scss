@@ -1,0 +1,43 @@
+:root{
+    /* margin-units */
+  --m: 3rem;
+  --m-xs: 1.5rem;
+  --m-sm: 3rem;
+  --m-md: 6rem;
+  --m-lg: 12rem;
+  --m-xl: 24rem;
+  /* padding-units */
+  --p: 3rem;
+  --p-xs: 1.5rem;
+  --p-sm: 3rem;
+  --p-md: 6rem;
+  --p-lg: 12rem;
+  --p-xl: 24rem;
+}
+
+a, .button{
+  cursor: pointer;
+}
+
+html{
+  font-size: calc(10 * 100vw / 320);
+  width: calc(0vw + 100%);
+}
+
+@media screen and (min-width: 667px), screen and (min-aspect-ratio: 13/9){
+  html {
+      font-size: calc(12 * 100vw / 667);
+  }
+}
+
+@media screen and (min-width: 1025px){
+  html {
+      font-size: calc(18 * 100vw / 1440);
+  }
+}
+
+@media screen and (min-width: 1440px){
+  html {
+      font-size: calc(24 * 100vw / 1920);
+  }
+}

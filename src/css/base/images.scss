@@ -1,0 +1,67 @@
+// aspect ratios
+// we use an aspect ratio tag to denote an image type
+// we use the zero height trick here to set the aspect ratio based on the width of the element
+// padding is based on width, so we use a fraction based on the width to calculate the entire height of the element
+// using padding top or bottom, we get a predictable aspect ratio even if the width is dynamic
+
+.img-wide, .img-poster, .img-square, .img-round{
+  overflow: hidden;
+  position: relative;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.img-wide{
+  height: 0;
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.img-poster{
+  height: 0;
+  padding-top: calc(3 / 2 * 100%);
+}
+
+.img-square{
+  height: 0;
+  padding-top: calc(1 / 1 * 100%);
+}
+
+.img-round{
+  height: 0;
+  padding-top: calc(1 / 1 * 100%);
+  border-radius: 100%;
+}
+
+// sizing
+// we use a set of standard sizes to  give it a width
+// based on these two inputs, we can create dynamic images that conform to aspect ratios
+
+.img-fluid{
+  width: 100%;
+}
+
+.img-xl{
+  width: 48rem;
+}
+
+.img-lg{
+  width: 30rem;
+}
+
+.img-md{
+  width: 24rem;
+}
+
+.img-sm{
+  width: 16rem;
+}
+
+.img-xs{
+  width: 12rem;
+}

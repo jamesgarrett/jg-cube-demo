@@ -1,4 +1,4 @@
-import './App.scss';
+import './css/App.scss';
 import './index.css';
 import Cursor from './components/Cursor.jsx';
 import Cube from './components/Cube.jsx';

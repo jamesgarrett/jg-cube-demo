@@ -3,6 +3,10 @@ import RightArrow from '../img/arrow-right.svg';
 import LeftArrow from '../img/arrow-left.svg';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import Front from '../pages/Front';
+import Back from '../pages/Back';
+import Left from '../pages/Left';
+import Right from '../pages/Right';
 
 class Cube extends React.Component{
   constructor(props) {
@@ -39,42 +43,10 @@ class Cube extends React.Component{
         </nav>
         <section className="cube-container">
           <div id="cube" style={{transform: this.state.rotation}}>
-            <figure className="front">
-              <div className="section-content">
-                <header>home</header>
-                <div className="content">
-                  si lorem ipsum sit dolor est...
-                </div>
-                <Footer/>
-              </div>
-            </figure>
-            <figure className="back">
-              <div className="section-content">
-                  <header>shop</header>
-                  <div className="content">
-                    si lorem ipsum sit dolor est...
-                  </div>
-                  <Footer/>
-                </div>
-            </figure>
-            <figure className="right">
-              <div className="section-content">
-                 <header>projects</header>
-                  <div className="content">
-                    si lorem ipsum sit dolor est...
-                  </div>
-                  <Footer/>
-                </div>
-              </figure>
-            <figure className="left">
-              <div className="section-content">
-                  <header>contact</header>
-                  <div className="content">
-                    si lorem ipsum sit dolor est...
-                  </div>
-                  <Footer/>
-                </div>
-            </figure>
+            <Front />
+            <Back />
+            <Right />
+            <Left />
           </div>
         </section>
       </div>
