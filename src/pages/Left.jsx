@@ -4,9 +4,9 @@ import Footer from '../components/Footer';
 const Left = () => (
   <figure className="left">
     <div className="section-content">
-      <header>contact</header>
       <div className="content">
-        si lorem ipsum sit dolor est...
+          <h1>Contact</h1>
+          <p>Drop us a line – <a href="mailto:team@jamesgarrett.co">team@jamesgarrett.co</a></p>
       </div>
       <Footer/>
     </div>

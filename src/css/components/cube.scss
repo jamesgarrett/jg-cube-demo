@@ -24,9 +24,9 @@
 }
 
 #cube .front  { transform: rotateY(   0deg ) translateZ( 50vw ); background: #F6EEE3; color: #222222;}
-#cube .back   { transform: rotateY( 180deg ) translateZ( 50vw ); background: gold;}
-#cube .right  { transform: rotateY(  90deg ) translateZ( 50vw ); background: dodgerblue;}
-#cube .left   { transform: rotateY( -90deg ) translateZ( 50vw ); background: cadetblue; }
+#cube .back   { transform: rotateY( 180deg ) translateZ( 50vw ); background: gold; color: #222222;}
+#cube .right  { transform: rotateY(  90deg ) translateZ( 50vw ); background: dodgerblue; color: #222222;}
+#cube .left   { transform: rotateY( -90deg ) translateZ( 50vw ); background: cadetblue; color: #222222;}
 
 #cube { transform: translateZ( -50vw ); }
 
@@ -43,8 +43,47 @@ div.section-content{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  .content{
+    padding: 2em;
+  }
   header, .footer, .content {
     padding: 2em;
+  }
+  .scroller{
+    padding: 12vh 0em;
+    margin: auto 2em;
+  }
+}
+
+@media screen and (min-width:767px){
+  div.section-content .content.scroller{
+      padding: 12vh 0em;
+      margin: auto 8em;
+  }
+  .back{
+    div.footer{
+      display: block;
+    }
+  }
+}
+
+.back{
+  .footer{
+    display: none;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media screen and (min-width: 767px){
+  .footer{
+    position: fixed;
+    height: 12vh;
+    bottom: 0;
+    border-top: 1px solid #222222;
+    width: 100%;
+  }
+
+  div.section-content .content{
+    padding: 2em 8em;
   }
 }
